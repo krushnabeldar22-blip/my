@@ -1,0 +1,114 @@
+# Folder Structure
+
+```plaintext id="z3r7ma"
+project-folder/
+│
+├── server.js
+├── package.json
+└── public/
+    │
+    ├── index.html
+    ├── style.css
+    └── script.js
+```
+
+---
+
+# Step 1: Install Node.js
+
+Download:
+
+[Node.js Official Website](https://nodejs.org?utm_source=chatgpt.com)
+
+Check installation:
+
+```bash id="t5v1qs"
+node -v
+```
+
+---
+
+# Step 2: Initialize Node Project
+
+Open terminal inside project folder:
+
+```bash id="u8m4xy"
+npm init -y
+```
+
+This creates:
+
+```plaintext id="j3q7na"
+package.json
+```
+
+---
+
+# Step 3: Install Express
+
+```bash id="k7p2wd"
+npm install express
+```
+
+---
+
+# Step 4: Create server.js
+
+---
+
+# Step 5: Create public/index.html
+
+---
+
+# Step 6: Create public/style.css
+
+`
+# Step 7: Create public/script.js
+
+# Step 8: Run Server
+
+```bash id="v9x4te"
+node server.js
+```
+
+Output:
+
+```plaintext id="m0r7yv"
+Server Running at http://localhost:3000
+```
+
+---
+
+# Step 9: Open Website
+
+Open browser:
+
+```plaintext id="y5p2dh"
+http://localhost:3000
+```
+
+---
+
+# Working of Application
+
+1. User opens browser
+2. Request goes to Node.js server
+3. Express serves static files from `public` folder
+4. HTML, CSS, and JS are loaded in browser
+5. Website is displayed
+
+---
+
+# Advantages
+
+* Fast web server
+* Easy static file hosting
+* Lightweight application
+* Simple routing
+* Cross-platform support
+
+---
+
+# Conclusion
+
+This Node.js application uses Express framework to serve a static website. The server delivers HTML, CSS, and JavaScript files from the public folder and displays the webpage in the browser successfully.
