@@ -1,0 +1,222 @@
+#   How to Build a Docker Project
+
+A Docker project is created using:
+
+* Application files
+* `Dockerfile`
+* Docker commands
+
+---
+
+# ✅ Step 1: Create Project Folder
+
+Example:
+
+```bash id="x4m7q2"
+mkdir dockerproject
+cd dockerproject
+```
+
+Open this folder in Visual Studio Code.
+
+---
+
+# ✅ Step 2: Create Application File
+
+Example Python app:
+
+Create `app.py`
+
+```python id="k8p1m5"
+print("Docker Project Running Successfully")
+```
+
+---
+
+# ✅ Step 3: Create Dockerfile
+
+Create file named:
+
+```text id="v2q9x7"
+Dockerfile
+```
+
+(no extension)
+
+Add:
+
+```Dockerfile id="r5m8p2"
+FROM python:3.10
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["python", "app.py"]
+```
+
+---
+
+# ✅ Step 4: Build Docker Image
+
+Open terminal in VS Code:
+
+```bash id="n7x4q1"
+docker build -t myproject .
+```
+
+Explanation:
+
+| Part        | Meaning        |
+| ----------- | -------------- |
+| `build`     | Build image    |
+| `-t`        | Tag name       |
+| `myproject` | Image name     |
+| `.`         | Current folder |
+
+---
+
+# ✅ Step 5: Run Docker Container
+
+```bash id="f3p8m6"
+docker run myproject
+```
+
+Output:
+
+```text id="j1q7x4"
+Docker Project Running Successfully
+```
+
+---
+
+# ✅ Step 6: Check Images
+
+```bash id="u8m2p5"
+docker images
+```
+
+---
+
+# ✅ Step 7: Check Containers
+
+```bash id="w4q9x1"
+docker ps -a
+```
+
+---
+
+# ✅ Example Node.js Docker Project
+
+## server.js
+
+```javascript id="m5x2q8"
+console.log("Node Docker Project Running");
+```
+
+---
+
+## Dockerfile
+
+```Dockerfile id="y7p4m1"
+FROM node:18
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["node", "server.js"]
+```
+
+---
+
+## Build
+
+```bash id="c9q1x5"
+docker build -t nodeproject .
+```
+
+---
+
+## Run
+
+```bash id="p6m8q2"
+docker run nodeproject
+```
+
+---
+
+# ✅ Example Web App Docker Project
+
+## index.html
+
+```html id="r2x7m4"
+<h1>Docker Website Running</h1>
+```
+
+---
+
+## Dockerfile
+
+```Dockerfile id="t8p5q1"
+FROM nginx
+
+COPY . /usr/share/nginx/html
+```
+
+---
+
+## Build
+
+```bash id="m1q9x6"
+docker build -t website .
+```
+
+---
+
+## Run Website
+
+```bash id="k4m7p2"
+docker run -p 8080:80 website
+```
+
+Open browser:
+
+```text id="v5x1q8"
+http://localhost:8080
+```
+
+---
+
+# ✅ Important Docker Commands
+
+| Command         | Purpose            |
+| --------------- | ------------------ |
+| `docker build`  | Build image        |
+| `docker run`    | Run container      |
+| `docker images` | Show images        |
+| `docker ps`     | Running containers |
+| `docker stop`   | Stop container     |
+
+---
+
+# ✅ Docker Project Structure
+
+```text id="d8q4m7"
+dockerproject/
+ ├── Dockerfile
+ ├── app.py
+```
+
+---
+
+# ✅ Conclusion
+
+A Docker project is built by:
+
+1. Creating application files
+2. Writing a Dockerfile
+3. Building Docker image
+4. Running the container
+
+Docker helps package applications into portable environments that work consistently on any system.
