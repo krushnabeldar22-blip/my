@@ -1,0 +1,205 @@
+# How to Create an Angular App
+
+Angular is a frontend framework developed by Google used for building dynamic web applications.
+
+---
+
+# Step 1: Install Node.js
+
+Download Node.js:
+
+[Node.js Official Website](https://nodejs.org?utm_source=chatgpt.com)
+
+Check installation:
+
+```bash id="h3m7xq"
+node -v
+```
+
+Check npm:
+
+```bash id="v8p2ke"
+npm -v
+```
+
+---
+
+# Step 2: Install Angular CLI
+
+Install Angular globally:
+
+```bash id="k1x5nd"
+npm install -g @angular/cli
+```
+
+Check Angular version:
+
+```bash id="t6q9wr"
+ng version
+```
+
+---
+
+# Step 3: Create Angular App
+
+```bash id="m4v8pc"
+ng new myapp
+```
+
+During setup:
+
+```plaintext id="f9x1bt"
+Would you like to add Angular routing?
+```
+
+Type:
+
+```plaintext id="a2r7qn"
+Yes
+```
+
+Then:
+
+```plaintext id="s5k0me"
+Which stylesheet format?
+```
+
+Choose:
+
+```plaintext id="j7n4vx"
+CSS
+```
+
+---
+
+# Step 4: Open Project Folder
+
+```bash id="c3w8yt"
+cd myapp
+```
+
+---
+
+# Step 5: Run Angular App
+
+```bash id="n6m1qp"
+ng serve
+```
+
+OR
+
+```bash id="z9v5kh"
+ng serve --open
+```
+
+---
+
+# Step 6: Open Browser
+
+Open:
+
+```plaintext id="e4p8rc"
+http://localhost:4200
+```
+
+Now your Angular app is running successfully.
+
+---
+
+# Angular Project Structure
+
+```plaintext id="y7m2dx"
+myapp/
+│
+├── src/
+│   ├── app/
+│   ├── assets/
+│   ├── index.html
+│   └── styles.css
+│
+├── package.json
+└── angular.json
+```
+
+---
+
+# Important Angular Commands
+
+| Command                    | Purpose            |
+| -------------------------- | ------------------ |
+| ng new myapp               | Create Angular app |
+| ng serve                   | Run Angular app    |
+| ng generate component home | Create component   |
+| ng generate service user   | Create service     |
+| ng build                   | Build project      |
+
+---
+
+# Create Component
+
+Example:
+
+```bash id="u5n8vb"
+ng generate component login
+```
+
+Shortcut:
+
+```bash id="r2x9pl"
+ng g c login
+```
+
+---
+
+# Create Service
+
+```bash id="m8v4qt"
+ng generate service services/user
+```
+
+---
+
+# Example Angular Component
+
+## app.component.html
+
+```html id="p7w3kc"
+<h1>Welcome to Angular App</h1>
+
+<button (click)="showMessage()">
+    Click
+</button>
+```
+
+---
+
+## app.component.ts
+
+```typescript id="x1n6rb"
+export class AppComponent {
+
+    showMessage(){
+
+        alert("Angular Working");
+
+    }
+
+}
+```
+
+---
+
+# Advantages of Angular
+
+* Component-based architecture
+* Fast frontend development
+* Routing support
+* API integration
+* Reusable components
+* Two-way data binding
+
+---
+
+# Conclusion
+
+Angular is a powerful frontend framework used to create dynamic single-page web applications. Using Angular CLI, developers can quickly create, run, and manage scalable web projects efficiently.
