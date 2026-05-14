@@ -1,0 +1,594 @@
+## Step 1: Logout Old GitHub Account From VS Code
+
+Open **VS Code Terminal** and run:
+
+```bash
+git config --global --unset user.name
+git config --global --unset user.email
+```
+
+Now remove old GitHub login credentials.
+
+### On Windows:
+
+1. Press `Windows + S`
+2. Search → **Credential Manager**
+3. Open it
+4. Go to **Windows Credentials**
+5. Remove all entries related to:
+
+   * GitHub
+   * git:[https://github.com](https://github.com)
+
+---
+
+## Step 2: Create/New Login to GitHub
+
+Go to:
+
+[GitHub Official Website](https://github.com?utm_source=chatgpt.com)
+
+Create your new account and verify email.
+
+---
+
+## Step 3: Configure New GitHub Account in VS Code
+
+Open terminal in VS Code and run:
+
+```bash
+git config --global user.name "YourNewGitHubUsername"
+git config --global user.email "yournewemail@gmail.com"
+```
+
+Example:
+
+```bash
+git config --global user.name "krushnabeldar22-blip"
+git config --global user.email "krushnabeldar22@gmail.com"
+```
+
+---
+
+## Step 4: Check Configuration
+
+Run:
+
+```bash
+git config --global --list
+```
+
+You should see:
+
+```bash
+user.name=YourNewGitHubUsername
+user.email=yournewemail@gmail.com
+```
+
+---
+
+## Step 5: Login GitHub in VS Code
+
+### Method 1 (Easy Method)
+
+1. Open VS Code
+2. Click Accounts icon (bottom left)
+3. Click **Sign in with GitHub**
+4. Browser will open
+5. Login using new GitHub account
+6. Authorize VS Code
+
+---
+
+## Step 6: Create New Repository on GitHub
+
+1. Open:
+
+[Create New GitHub Repository](https://github.com/new?utm_source=chatgpt.com)
+
+2. Enter:
+
+   * Repository Name
+   * Public/Private
+3. Click **Create Repository**
+
+---
+
+## Step 7: Push Existing Project to New GitHub Account
+
+Open your project folder in VS Code.
+
+Run commands one by one:
+
+```bash
+git init
+```
+
+```bash
+git add .
+```
+
+```bash
+git commit -m "first commit"
+```
+
+Now connect your new GitHub repo:
+
+```bash
+git remote add origin https://github.com/krushnabeldar22-blip/my
+```
+
+Example:
+
+```bash
+git remote add origin https://github.com/krushnabeldar22-blip/myproject.git
+```
+
+---
+
+## Step 8: Push Code
+
+```bash
+git branch -M main
+```
+
+```bash
+git push -u origin main
+```
+
+---
+
+# If You Get Permission Error (403)
+
+Run:
+
+```bash
+git remote -v
+```
+
+Remove old remote:
+
+```bash
+git remote remove origin
+```
+
+Add new remote again:
+
+```bash
+git remote add origin https://github.com/NEW_USERNAME/REPOSITORY_NAME.git
+```
+
+Then push again:
+
+```bash
+git push -u origin main
+```
+
+---
+
+# Optional: Login Using GitHub Token
+
+If GitHub asks for password:
+
+1. Open:
+
+[GitHub Personal Access Tokens](https://github.com/settings/tokens?utm_source=chatgpt.com)
+
+2. Generate new token
+3. Copy token
+4. Use token instead of password while pushing
+
+---
+
+## Useful Git Commands
+
+```bash
+git status
+git add .
+git commit -m "update"
+git push
+git pull
+```
+
+---
+
+## Check Current Logged GitHub User
+
+```bash
+gh auth status
+```
+
+If `gh` command not found, install:
+
+[GitHub CLI Download](https://cli.github.com?utm_source=chatgpt.com)
+## Step 1: Logout Old GitHub Account From VS Code
+
+Open **VS Code Terminal** and run:
+
+```bash
+git config --global --unset user.name
+git config --global --unset user.email
+```
+
+Now remove old GitHub login credentials.
+
+### On Windows:
+
+1. Press `Windows + S`
+2. Search → **Credential Manager**
+3. Open it
+4. Go to **Windows Credentials**
+5. Remove all entries related to:
+
+   * GitHub
+   * git:[https://github.com](https://github.com)
+
+---
+
+## Step 2: Create/New Login to GitHub
+
+Go to:
+
+[GitHub Official Website](https://github.com?utm_source=chatgpt.com)
+
+Create your new account and verify email.
+
+---
+
+## Step 3: Configure New GitHub Account in VS Code
+
+Open terminal in VS Code and run:
+
+```bash
+git config --global user.name "YourNewGitHubUsername"
+git config --global user.email "yournewemail@gmail.com"
+```
+
+Example:
+
+```bash
+git config --global user.name "krushna123"
+git config --global user.email "krushna@gmail.com"
+```
+
+---
+
+## Step 4: Check Configuration
+
+Run:
+
+```bash
+git config --global --list
+```
+
+You should see:
+
+```bash
+user.name=YourNewGitHubUsername
+user.email=yournewemail@gmail.com
+```
+
+---
+
+## Step 5: Login GitHub in VS Code
+
+### Method 1 (Easy Method)
+
+1. Open VS Code
+2. Click Accounts icon (bottom left)
+3. Click **Sign in with GitHub**
+4. Browser will open
+5. Login using new GitHub account
+6. Authorize VS Code
+
+---
+
+## Step 6: Create New Repository on GitHub
+
+1. Open:
+
+[Create New GitHub Repository](https://github.com/new?utm_source=chatgpt.com)
+
+2. Enter:
+
+   * Repository Name
+   * Public/Private
+3. Click **Create Repository**
+
+---
+
+## Step 7: Push Existing Project to New GitHub Account
+
+Open your project folder in VS Code.
+
+Run commands one by one:
+
+```bash
+git init
+```
+
+```bash
+git add .
+```
+
+```bash
+git commit -m "first commit"
+```
+
+Now connect your new GitHub repo:
+
+```bash
+git remote add origin https://github.com/NEW_USERNAME/REPOSITORY_NAME.git
+```
+
+Example:
+
+```bash
+git remote add origin https://github.com/krushna123/myproject.git
+```
+
+---
+
+## Step 8: Push Code
+
+```bash
+git branch -M main
+```
+
+```bash
+git push -u origin main
+```
+
+---
+
+# If You Get Permission Error (403)
+
+Run:
+
+```bash
+git remote -v
+```
+
+Remove old remote:
+
+```bash
+git remote remove origin
+```
+
+Add new remote again:
+
+```bash
+git remote add origin https://github.com/NEW_USERNAME/REPOSITORY_NAME.git
+```
+
+Then push again:
+
+```bash
+git push -u origin main
+```
+
+---
+
+# Optional: Login Using GitHub Token
+
+If GitHub asks for password:
+
+1. Open:
+
+[GitHub Personal Access Tokens](https://github.com/settings/tokens?utm_source=chatgpt.com)
+
+2. Generate new token
+3. Copy token
+4. Use token instead of password while pushing
+
+---
+
+## Useful Git Commands
+
+```bash
+git status
+git add .
+git commit -m "update"
+git push
+git pull
+```
+
+---
+
+## Check Current Logged GitHub User
+
+```bash
+gh auth status
+```
+
+If `gh` command not found, install:
+
+[GitHub CLI Download](https://cli.github.com?utm_source=chatgpt.com)
+.....................................................................................................................................................................................
+## Initialize Git in Your Project
+
+Open terminal inside your project folder:
+
+```bash id="q4k1za"
+git init
+```
+
+---
+
+## Check File Status
+
+```bash id="l8t2mw"
+git status
+```
+
+Shows:
+
+* New files
+* Modified files
+* Deleted files
+
+---
+
+## Add Files for Tracking
+
+### Add all files
+
+```bash id="n5g7pe"
+git add .
+```
+
+### Add single file
+
+```bash id="0k6drc"
+git add filename.html
+```
+
+---
+
+## Save Snapshot (Commit)
+
+```bash id="3j8mvo"
+git commit -m "first commit"
+```
+
+Example:
+
+```bash id="lq7f7i"
+git commit -m "added login page"
+```
+
+---
+
+## Connect GitHub Repository
+
+```bash id="m0tt7q"
+git remote add origin https://github.com/krushnabeldar22-blip/REPOSITORY_NAME.git
+```
+
+---
+
+## Push Code to GitHub
+
+```bash id="8h4q1n"
+git branch -M main
+```
+
+```bash id="3e1v0q"
+git push -u origin main
+```
+
+---
+
+# Daily Workflow Commands
+
+Whenever you change code:
+
+## 1. Check changes
+
+```bash id="87d5ol"
+git status
+```
+
+---
+
+## 2. Add changes
+
+```bash id="0u0n7n"
+git add .
+```
+
+---
+
+## 3. Commit changes
+
+```bash id="uk9p3v"
+git commit -m "updated dashboard design"
+```
+
+---
+
+## 4. Push changes
+
+```bash id="97j4d6"
+git push
+```
+
+---
+
+# Useful Tracking Commands
+
+## Show Commit History
+
+```bash id="ah1zqb"
+git log
+```
+
+---
+
+## Show Short History
+
+```bash id="cxp7rk"
+git log --oneline
+```
+
+---
+
+## See Code Differences
+
+```bash id="4r0r3r"
+git diff
+```
+
+---
+
+## See Current Branch
+
+```bash id="x4vqsi"
+git branch
+```
+
+---
+
+## Pull Latest Code from GitHub
+
+```bash id="k5j6fq"
+git pull
+```
+
+---
+
+# Complete Example
+
+```bash id="z3w3ql"
+git init
+git add .
+git commit -m "first project"
+git branch -M main
+git remote add origin https://github.com/krushnabeldar22-blip/myproject.git
+git push -u origin main
+```
+
+---
+
+## Check Remote Repository
+
+```bash id="bnm1x5"
+git remote -v
+```
+
+---
+
+## Clone Existing Repository
+
+```bash id="j1gnhw"
+git clone https://github.com/krushnabeldar22-blip/myproject.git
+```
+
+---
+
+## GitHub Official Docs
+
+[Git Documentation](https://git-scm.com/doc?utm_source=chatgpt.com)
+
+[GitHub Docs](https://docs.github.com/en?utm_source=chatgpt.com)
+
